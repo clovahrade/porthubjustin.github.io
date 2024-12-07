@@ -1,0 +1,397 @@
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Apply Open Sans font to the body */
+    font-weight: bold; /* Make all text bold */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    color: white; /* Set default text color to white */
+}
+
+.top-header {
+    padding: 15px; /* Add some padding */
+    background-color: lightgray; /* Light gray background for header */
+    display: flex; /* Use flexbox for header layout */
+    align-items: center; /* Center content vertically */
+}
+
+.button-container {
+    display: flex; /* Use flexbox for button container */
+    gap: 10px; /* Space between buttons */
+    margin-left: auto; /* Push the button container to the right */
+}
+
+.button-container a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Decrease padding to make buttons smaller */
+    background-color: rgb(61, 181, 221); /* Change button background color to match footer */
+    color: white; /* Button text color */
+    border-radius: 15px; /* Increased border-radius for more rounded corners */
+    font-size: 12px; /* Decrease font size for button text */
+}
+
+.button-container a:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+main {
+    flex: 1; /* Allow main to grow and take available space */
+    display: flex; /* Use flexbox for main layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.about-container {
+    display: flex; /* Flexbox for layout */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.content-box {
+    background-color: rgb(61, 181, 221); /* Dark background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Flexbox for layout */
+    flex-direction: row; /* Align items in a row */
+    align-items: flex-start; /* Align items to the start */
+    width: 700px; /* Set the width to 1000px */
+}
+
+.image-container {
+    display: flex; /* Use flexbox for the image and heading */
+    flex-direction: column; /* Stack heading and image vertically */
+    align-items: center; /* Center items horizontally */
+    margin-right: 20px; /* Space between the image and the text */
+}
+
+.logo-text {
+    margin-left: 20px; /* Space between the image and text */
+    color: black;
+    font-size: 15px; /* Adjust font size if needed */
+}
+
+.portfolio-button {
+    text-decoration: none; /* Remove underline from link */
+    padding: 12px 20px; /* Increase padding for a larger button */
+    background-color: rgb(61, 181, 221); /* Match the button background color */
+    color: white; /* Button text color */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 16px; /* Increase font size for button text */
+    margin-top: 15px; /* Space above the button */
+    display: inline-block; /* Make it behave like a block element */
+}
+
+.portfolio-button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+.bottom-footer {
+    background-color: rgb(61, 181, 221); /* Light blue background for footer */
+    text-align: center; /* Center the footer text */
+    padding: 10px; /* Add padding for spacing */
+    color: white; /* Footer text color */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Align footer to the bottom */
+    width: 100%;
+}
+
+h1 {
+    margin-top: 0; /* Reset margin to fit inside the box */
+}
+
+p {
+    margin-top: 10px; /* Space between paragraphs */
+}
+
+.bold {
+    font-size: calc(1em + 5px); /* Increase font size by 5 pixels */
+    color: rgb(0, 0, 0); /* Change this to your desired color */
+}
+
+.about-text {
+    margin-top: 64px; /* Adjust this value to increase or decrease space */
+}
+
+.squares-container {
+    display: grid; /* Use grid layout for squares */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between squares */
+    width: 80%; /* Set width of the container */
+    margin: 20px auto; /* Center the container */
+}
+
+.square-container {
+    display: flex; /* Use flexbox for square and label alignment */
+    flex-direction: column; /* Stack square above label */
+    align-items: center; /* Center items horizontally */
+}
+
+.square {
+    background-color: rgb(61, 181, 221); /* Background color for squares */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding for squares */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 24px; /* Font size for numbers */
+    width: 200px; /* Width of the square */
+    height: 200px; /* Set a fixed height for the square */
+    position: relative; /* Position relative for absolute positioning of the image */
+    overflow: hidden; /* Hide overflow to keep the image within the square */
+}
+
+.square-image {
+    width: 100%; /* Make the image take the full width of the square */
+    height: 100%; /* Make the image take the full height of the square */
+    object-fit: cover; /* Cover the square without distorting the image */
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1; /* Ensure the image is behind the text */
+}
+
+.square span {
+    position: relative; /* Position the text relative to the square */
+    z-index: 2; /* Ensure the text is above the image */
+}
+
+.square:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+.background-square {
+    position: absolute; /* Position it absolutely */
+    top: -40px; /* Move it up slightly */
+    left: -20px; /* Move it left slightly */
+    width: calc(100% + 40px); /* Make it wider than the container */
+    height: 650px; /* Increase the height of the background square */
+    background-color: rgba(0, 0, 0, 0.1); /* Light background color with transparency */
+    z-index: 0; /* Ensure it is behind the squares */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.squares-container {
+    position: relative; /* Set position relative to contain the absolute elements */
+    display: grid; /* Use grid layout for squares */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between squares */
+    width: 80%; /* Set width of the container */
+    margin: 20px auto; /* Center the container */
+}
+
+.squares-container {
+    position: relative; /* Set position relative to contain the absolute elements */
+    display: grid; /* Use grid layout for squares */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between squares */
+    width: 80%; /* Set width of the container */
+    margin: 20px auto; /* Center the container */
+}
+
+.label {
+    margin-top: 10px; /* Space between square and label */
+    color: rgb(0, 0, 0); /* Label text color */
+    font-size: 16px; /* Font size for labels */
+}
+.label2 {
+    margin-top: 10px; /* Space between square and label */
+    color: rgb(0, 0, 0); /* Label text color */
+    font-size: 16px; /* Font size for labels */
+    text-align: center; /* Center the text */
+    display: block; /* Ensure the text is treated as a block element */
+    width: 100%; /* Optional: Make the label take the full width of its container */
+}
+.center-square {
+    background-color: rgb(61, 181, 221); /* Background color for the square */
+    width: 1000px; /* Set the width of the square */
+    height: 2750px; /* Set the height of the square */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: black; /* Text color inside the square */
+    margin-top: 100px; /* Space above the square */
+    margin-bottom: 200px; /* Space below the square */
+    padding: 20px; /* Add padding inside the box */
+}
+.center-square2 {
+    background-color: rgb(61, 181, 221); /* Background color for the square */
+    width: 1000px; /* Set the width of the square */
+    height: 4175px; /* Set the height of the square */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: black; /* Text color inside the square */
+    margin-top: 100px; /* Space above the square */
+    margin-bottom: 200px; /* Space below the square */
+    padding: 20px; /* Add padding inside the box */
+}
+.center-square3 {
+    background-color: rgb(61, 181, 221); /* Background color for the square */
+    width: 1000px; /* Set the width of the square */
+    height: 3450px; /* Set the height of the square */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: black; /* Text color inside the square */
+    margin-top: 100px; /* Space above the square */
+    margin-bottom: 200px; /* Space below the square */
+    padding: 20px; /* Add padding inside the box */
+}
+.center-square4 {
+    background-color: rgb(61, 181, 221); /* Background color for the square */
+    width: 1000px; /* Set the width of the square */
+    height: 4870px; /* Set the height of the square */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: black; /* Text color inside the square */
+    margin-top: 100px; /* Space above the square */
+    margin-bottom: 200px; /* Space below the square */
+    padding: 20px; /* Add padding inside the box */
+}
+.center-square5 {
+    background-color: rgb(61, 181, 221); /* Background color for the square */
+    width: 1000px; /* Set the width of the square */
+    height: 1475px; /* Set the height of the square */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: black; /* Text color inside the square */
+    margin-top: 100px; /* Space above the square */
+    margin-bottom: 200px; /* Space below the square */
+    padding: 20px; /* Add padding inside the box */
+}
+.center-square6 {
+    background-color: rgb(61, 181, 221); /* Background color for the square */
+    width: 1000px; /* Set the width of the square */
+    height: 2825px; /* Set the height of the square */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center content horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: black; /* Text color inside the square */
+    margin-top: 100px; /* Space above the square */
+    margin-bottom: 200px; /* Space below the square */
+    padding: 20px; /* Add padding inside the box */
+}
+
+.center-text {
+    margin: 10px 0; /* Space above and below the text */
+    color: white; /* Text color */
+    font-size: 50px; /* Font size */
+    text-align: justify; /* Justify the text */
+    width: 90%; /* Set width to allow for margins */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+.center-text2 {
+    margin: 10px 0; /* Space above and below the text */
+    color: white; /* Text color */
+    font-size: 40px; /* Font size */
+    text-align: justify; /* Justify the text */
+    width: 90%; /* Set width to allow for margins */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+.additional-text {
+    margin: 20px 0; /* Space above and below the text */
+    color: white; /* Text color */
+    font-size: 20px; /* Font size */
+    text-align: justify; /* Justify the text */
+    width: 90%; /* Set width to allow for margins */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+.additional-text2 {
+    margin: 20px 0; /* Space above and below the text */
+    color: white; /* Text color */
+    font-size: 30px; /* Font size */
+    text-align: justify; /* Justify the text */
+    width: 90%; /* Set width to allow for margins */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+.center-image {
+    max-width: 90%; /* Ensure the image does not exceed the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Space above and below the image */
+    border-radius: 10px; /* Optional: rounded corners for the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+}
+.center-disciplines {
+    text-align: left; /* Align the text to the left */
+    font-size: 40px; /* Keep the font size larger */
+    color: white; /* Maintain the text color */
+    margin: 30px 0; /* Keep the margin for spacing */
+    font-weight: bold; /* Keep the text bold */
+}
+.center-disciplines2 {
+    text-align: left; /* Align the text to the left */
+    font-size: 30px; /* Keep the font size larger */
+    color: white; /* Maintain the text color */
+    margin: 30px 0; /* Keep the margin for spacing */
+    font-weight: bold; /* Keep the text bold */
+}
+.center-disciplines3 {
+    text-align: left; /* Align the text to the left */
+    font-size: 27px; /* Keep the font size larger */
+    color: rgb(80, 77, 77); /* Maintain the text color */
+    margin: 30px 0; /* Keep the margin for spacing */
+    font-weight: bold; /* Keep the text bold */
+}
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space between the buttons */
+    margin-top: 20px;
+  }
+  
+  .back-button, .next-button {
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    font-size: 18px; /* Increased font size */
+    background-color: white; /* White background */
+    color: #ADD8E6; /* Light blue text color */
+    text-decoration: none;
+    border: 2px solid #ADD8E6; /* Light blue border */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+  }
+  
+  .back-button:hover, .next-button:hover {
+    background-color: #ADD8E6; /* Light blue background on hover */
+    color: white; /* White text on hover */
+  }
+  .contact-container {
+    background-color: rgb(61, 181, 221); /* Background color for the contact section */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the container */
+    width: 80%; /* Set width of the container */
+}
+
+.contact-container h1 {
+    color: black; /* Heading color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-container p {
+    margin-bottom: 10px; /* Space below the paragraph */
+}
+
+.contact-container ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.contact-container li {
+    margin-bottom: 10px; /* Space between list items */
+}
